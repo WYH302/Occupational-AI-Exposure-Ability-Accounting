@@ -1,0 +1,5 @@
+Release comparison,Version-drift screen,Drift occupations,Median base-2 Jensen-Shannon distance,P90 base-2 Jensen-Shannon distance,Pair share above drift P90
+O*NET 24.3 to 27.1,Updated weights only,152,0.08844308464526299,0.14642431880560472,0.676500508646999
+O*NET 24.3 to 27.1,Updated weights and unchanged title,118,0.08709960615487612,0.14503790347446252,0.688708036622584
+O*NET 24.3 to 30.3,Updated weights only,226,0.09041994940130818,0.15490129530044533,0.6134282807731435
+O*NET 24.3 to 30.3,Updated weights and unchanged title,182,0.08412341213155657,0.14620116850797496,0.6775178026449644

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+demo_output/
+analysis/reproduced/
+.DS_Store

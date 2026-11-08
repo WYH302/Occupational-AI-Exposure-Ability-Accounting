@@ -1,0 +1,4 @@
+Evidence,Result
+ACS annual earnings; Positive-earner weighted,N=318; joint p=0.9955; grouped RMSE 0.0429 to 0.0434
+ACS annual earnings; Equal occupation,N=318; joint p=0.6054; grouped RMSE 0.0740 to 0.0742
+OEWS estimates; Equal occupation,N=648; joint p=0.2307; grouped RMSE 0.0454 to 0.0454

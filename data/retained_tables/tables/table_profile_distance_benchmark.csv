@@ -1,0 +1,6 @@
+Comparison,N,Exact-zero share,Mean base-2 Jensen-Shannon distance,Median base-2 Jensen-Shannon distance,P90 base-2 Jensen-Shannon distance,Pair share above benchmark P90
+Near-score cross-major occupation pairs,983,0.0,0.18249529849319177,0.17308781274575225,0.26122632885544844,
+"Same occupation, O*NET 24.3 to 27.1 (all crosswalk-supported matches)",362,0.580110497237569,0.039345948203869316,0.0,0.1245119124045003,0.8301119023397762
+"Same occupation, O*NET 24.3 to 27.1 (updated weights only)",152,0.0,0.0937054819065835,0.08844308464526299,0.14642431880560472,0.676500508646999
+"Same occupation, O*NET 24.3 to 30.3 (all crosswalk-supported matches)",362,0.3756906077348066,0.06218833548378423,0.05848600899176778,0.13964892068552992,0.7293997965412004
+"Same occupation, O*NET 24.3 to 30.3 (updated weights only)",226,0.0,0.09961140462446856,0.09041994940130818,0.15490129530044533,0.6134282807731435

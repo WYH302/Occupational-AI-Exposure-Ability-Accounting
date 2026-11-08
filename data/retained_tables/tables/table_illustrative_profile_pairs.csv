@@ -1,0 +1,5 @@
+AIOE quartile,Occupation A,AIOE A,Occupation B,AIOE B,Absolute score gap,Rebuilt-score gap,Base-2 Jensen-Shannon distance
+1,Waiters and Waitresses,-0.9481003,Sewing Machine Operators,-0.9639661,0.01586580000000004,0.015864562297446927,0.28201561440751793
+2,Pharmacy Aides,-0.1552654,Jewelers and Precious Stone and Metal Workers,-0.1560197,0.0007543000000000133,0.0010344719001157687,0.3876403506023517
+3,Rehabilitation Counselors,0.5025014,Optometrists,0.5040194,0.0015180000000000193,0.0015178280927149457,0.44136069177605464
+4,Substance Abuse and Behavioral Disorder Counselors,1.030841,Telephone Operators,1.019712,0.011128999999999944,0.011128411809788297,0.403728227987292

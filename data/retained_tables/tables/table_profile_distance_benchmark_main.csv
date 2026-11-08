@@ -1,0 +1,5 @@
+Comparison,Result
+Near-score occupation pairs,N=983; median=0.1731; P90=0.2612
+"O*NET 24.3 to 27.1, crosswalk-supported matches",N=362; zero=58.0%; median=0.0000; P90=0.1245; pair share=83.0%
+"O*NET 24.3 to 27.1, updated only",N=152; zero=0.0%; median=0.0884; P90=0.1464; pair share=67.7%
+"O*NET 24.3 to 30.3, updated only",N=226; zero=0.0%; median=0.0904; P90=0.1549; pair share=61.3%
