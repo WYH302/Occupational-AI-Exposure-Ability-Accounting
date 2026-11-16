@@ -34,18 +34,18 @@ Holding the benchmark Felten–Raj–Seamans (AIOE) capability mapping fixed acr
    Across **983 cross-major occupation pairs** within $0.025$ standard deviations on both published and reconstructed AIOE scores, the median base-2 Jensen–Shannon profile distance is **0.1731** ($P_{90} = 0.2612$). Calibrated against historical within-occupation skill updates across O\*NET releases 24.3–27.1 ($N = 152$) and 24.3–30.3 ($N = 226$), **67.7%** and **61.3%** of iso-exposure pairs (and **68.9%** / **67.8%** under title-stable screens) diverge more than the 90th percentile of multi-year skill revisions.
 
 <p align="center">
-  <img src="assets/profile_distance_cdf.png" alt="Iso-Exposure CDF vs O*NET Drift" width="46%">
+  <img src="assets/profile_distance_cdf.png" alt="Iso-Exposure CDF and Quantile Strip vs O*NET Drift" width="48%">
   &nbsp;&nbsp;
-  <img src="assets/quartile_and_caliper_profile.png" alt="Quartile Divergence and Caliper Robustness" width="50%">
+  <img src="assets/quartile_and_caliper_profile.png" alt="Quartile Divergence and Caliper Robustness" width="48%">
 </p>
 
 3. **Case-Level Mechanism & Bifurcated Adjustment Regime**  
-   Comparing *Rehabilitation Counselors* ($0.503$) and *Optometrists* ($0.504$) illustrates how verbal-counseling exposure and precision manual buffering offset to produce scalar parity ($\Delta = 0.0015$, $d_{JS} = 0.4414$). Pairing 22-fold leave-one-major-group-out cross-validated wage regressions (ACS & OEWS) with longitudinal rank-turnover tests demonstrates that scalar exposure tracks between-occupation wage sorting, whereas multidimensional capability profiles capture within-occupation task reorganization ($16.6\times$–$19.5\times$ higher longitudinal rank sensitivity).
+   Comparing *Rehabilitation Counselors* ($0.503$) and *Optometrists* ($0.504$) across an 8-axis polar capability radar and 12-ability signed balance sheet illustrates how verbal-counseling exposure and precision manual buffering offset to produce scalar parity ($\Delta = 0.0015$, $d_{JS} = 0.4414$). Pairing 22-fold leave-one-major-group-out cross-validated wage regressions and HC1 95%-CI forest plots (ACS & OEWS) with longitudinal rank-turnover tests demonstrates that scalar exposure tracks between-occupation wage sorting, whereas multidimensional capability profiles capture within-occupation task reorganization ($16.6\times$–$19.5\times$ higher longitudinal rank sensitivity).
 
 <p align="center">
-  <img src="assets/matched_occupation_profiles.png" alt="Counselors vs Optometrists Case Study" width="44%">
+  <img src="assets/matched_occupation_profiles.png" alt="Counselors vs Optometrists Case Study and Polar Radar" width="48%">
   &nbsp;&nbsp;
-  <img src="assets/econometric_and_stability_metrics.png" alt="Orthogonality, Longitudinal Sensitivity, and Cross-Validation" width="52%">
+  <img src="assets/econometric_and_stability_metrics.png" alt="Orthogonality, Longitudinal Sensitivity, CV RMSE, and 95% CI Forest Plot" width="48%">
 </p>
 
 ---
