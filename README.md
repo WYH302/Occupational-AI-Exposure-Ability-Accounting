@@ -1,14 +1,14 @@
 # Occupational-AI-Exposure-Ability-Accounting
 
-**Axiomatic Signed Capability Accounting for Occupational AI Exposure | 职业人工智能暴露度的公理化有符号能力核算框架**
+**Beyond Scalar Exposure: Axiomatic Signed Capability Accounting and the Iso-Exposure Illusion in U.S. Occupations | 超越标量暴露度：职业人工智能暴露度的公理化有符号能力核算与等暴露度幻觉**
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](#quick-start--快速开始)
 [![Zero External Dependencies](https://img.shields.io/badge/Core_Verification-Stdlib_Only-1E6B52.svg)](#quick-start--快速开始)
 [![SHA-256 Verified](https://img.shields.io/badge/Provenance-SHA--256_Verified-2B5B74.svg)](#repository-layout--目录结构)
 
 > **[English](#english-overview) | [中文说明](#中文说明)**  
-> This repository shares core analytical utilities, provenance-verified summary tables, visual benchmarks, and a zero-dependency interactive explorer accompanying our study on multidimensional occupational AI exposure decomposition. Feedback, issues, and academic discussions are warmly welcomed.  
-> 本仓库开源分享职业人工智能暴露度多维分解研究的核心核算工具、经 SHA-256 校验的基准汇总数据表、实验图表及零外部依赖的本地交互式可视化探索器，欢迎学术交流、指正与复用。
+> This repository shares core analytical utilities, SHA-256 provenance-verified summary tables, publication-ready frameless visual benchmarks (including editable SVG and PowerPoint architecture slides), and a zero-dependency interactive explorer accompanying our study. Feedback, issues, and academic discussions are warmly welcomed.  
+> 本仓库开源分享《超越标量暴露度：职业人工智能暴露度的公理化有符号能力核算》研究的核心核算工具、经 SHA-256 校验的基准汇总表、无外框论文实验图表（附带可编辑 SVG 与 PPTX 总体架构图）及零外部依赖的本地交互式可视化探索器，欢迎学术交流、指正与复用。
 
 <p align="center">
   <img src="assets/conceptual_architecture.png" alt="Overall Framework of Axiomatic Signed Capability Accounting" width="96%">
@@ -79,7 +79,7 @@ python demo.py
 | `analysis/revision_statistics.py` | CPI-U deflation, O\*NET ability alias harmonization, HC1 Wald tests, and FDR routines / 物价平减、能力对齐与稳健统计检验 | `numpy`, `pandas`, `statsmodels` |
 | `analysis/revision_experiments.py` | Longitudinal O\*NET 24.3/27.1/30.3 benchmarks and 22-fold LOGO cross-validated wage models / 跨期演进标尺与分组交叉验证回归流程 | Public O\*NET, BLS OEWS & IPUMS ACS |
 | `data/retained_tables/` | `PROVENANCE.csv` + 8 SHA-256 verified summary benchmark CSVs + caliper display table / 经哈希校验的基准结果汇总表 | Included in repo |
-| `assets/` | Framework diagram and empirical diagnostic figures / 总体架构图与核心实验图表 | Included in repo |
+| `assets/` | Framework diagram (`.png`, editable `.svg`, 1:1 `.pptx`) and frameless empirical diagnostic figures / 总体架构图（含可编辑 SVG/PPTX）与无外框核心实验图表 | Included in repo |
 | `tests/test_retained_bundle.py` | Automated unit test suite / 自动化单元测试套件 | Python 3.10+ stdlib only |
 
 ---
