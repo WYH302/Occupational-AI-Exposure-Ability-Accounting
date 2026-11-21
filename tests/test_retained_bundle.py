@@ -3,7 +3,13 @@
 from __future__ import annotations
 
 import math
+import sys
 import unittest
+from pathlib import Path
+
+_REPO_ROOT = str(Path(__file__).resolve().parents[1])
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
 
 from analysis.analyze_retained_bundle import (
     decompose_signed_capability_balance_sheet,
