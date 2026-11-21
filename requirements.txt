@@ -1,0 +1,7 @@
+# Core verification suite & interactive HTML explorer require Python 3.10+ stdlib only (zero external packages).
+# Optional scientific computing stack (aligned with local Python 3.12 environment):
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+statsmodels>=0.14.0
+matplotlib>=3.8.0

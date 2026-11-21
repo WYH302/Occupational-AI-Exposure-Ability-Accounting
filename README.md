@@ -65,7 +65,22 @@ python analysis/analyze_retained_bundle.py
 python demo.py
 ```
 
-*(On headless servers, run `python demo.py --no-open` and open `demo_output/index.html` in a browser. For optional scientific modules using `numpy`, `pandas`, and `statsmodels`, run `python -m pip install -r requirements-analysis.txt`.)*
+*(On headless servers, run `python demo.py --no-open` and open `demo_output/index.html` in a browser. For full scientific modules using `numpy`, `pandas`, `scipy`, `statsmodels`, and `matplotlib`, install `pip install -r requirements.txt`.)*
+
+---
+
+### Citation / 引用格式
+
+If you find this framework, verification suite, or benchmark dataset useful in your research, please consider citing our work:
+
+```bibtex
+@article{wu2026beyondscalar,
+  author  = {Wu, Yonghao and Huang, Ruoke and Wu, Zuxin and Wang, Ruirong and Liu, Chang and Filaretov, Vladimir and Yukhimets, Dmitry},
+  title   = {Beyond Scalar Exposure: Axiomatic Signed Capability Accounting and the Iso-Exposure Illusion in U.S. Occupations},
+  year    = {2026},
+  note    = {Open-source replication package: https://github.com/WYH302/Occupational-AI-Exposure-Ability-Accounting}
+}
+```
 
 ---
 
