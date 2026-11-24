@@ -116,3 +116,23 @@ If you find this framework, verification suite, or benchmark dataset useful in y
 - **仓库自带数据（`data/retained_tables/`）**：包含全部经 SHA-256 哈希锁定的聚合级职业基准结果表，不含任何个人微观隐私记录或机构内部敏感信息。
 - **外部公开数据源**：原始 O\*NET 数据库（24.3 / 27.1 / 30.3）、AIOE 基准关联矩阵、美国人口普查局职业交叉表及劳工统计局 OEWS / CPI-U 数据均可从官方渠道公开获取；美国社区调查（ACS）个体微观数据需遵循 IPUMS USA（`https://usa.ipums.org`）标准学术使用条款自行提取，本仓库严格遵守数据许可协议不二次分发原始个体记录。
 - **使用与反馈**：本代码库旨在以轻量、透明、可复现的方式服务于劳动经济学与计算社会科学社区。如发现任何疏漏或有改进建议，欢迎通过 GitHub Issues 交流指正。
+
+---
+
+## Research Notes: Design Choices, Pitfalls & Key Observations / 研究手记：真实思考、踩过的坑与独特观察
+
+1. **Why random 5-fold CV fails on occupational panels（为什么随机 5 折交叉验证在职业数据上会“虚高”）**  
+   Early experiments using naive random 5-fold cross-validation produced artificially optimistic out-of-sample RMSE because closely related six-digit SOC specialties within the same two-digit occupational family leaked across training and test splits. Switching to **22-fold leave-one-major-group-out (LOGO) cross-validation** with strictly fold-internal spline fitting eliminated taxonomic leakage cleanly.  
+   早期直接对 6 位 SOC 职业做随机 5 折交叉验证时，同属一个 2 位大类的高度相似细分职业被同时拆进训练集与测试集，导致样本外误差虚低。改为严格折内拟合样条基函数的 **22 折留一职业大类（LOGO）交叉验证**后，分类学泄露被彻底消除。
+
+2. **Taxonomy drift pitfall across O\*NET releases（O\*NET 跨版本能力重命名陷阱）**  
+   While benchmarking O\*NET 24.3 against 27.1 and 30.3, we discovered a silent label rename (`"Visual Color Discrimination"` → `"Visual Color Determination"`) that would silently drop an ability column if merged naively by exact string match. Our alias-harmonization routine in `analysis/revision_statistics.py` guards against this exact pitfall.  
+   在对接 O\*NET 24.3 与 27.1/30.3 跨期演进数据时，我们踩过一个隐蔽的坑：官方将能力名 `"Visual Color Discrimination"` 悄然改成了 `"Visual Color Determination"`，直接按名称合并会悄悄丢掉 1 维数据。我们已在 `analysis/revision_statistics.py` 中显式固化别名对齐校验。
+
+3. **Why boundary-zero-safe base-2 Jensen–Shannon beats raw KL / log-ratio metrics（为何选择零值安全的 base-2 JS 距离）**  
+   Many cognitive occupations carry near-zero manual/psychomotor contribution weights. Raw Kullback–Leibler or log-ratio compositional distances either diverge to infinity or become sensitive to arbitrary pseudocount smoothing constants; base-2 $d_{JS} \in [0,1]$ handles structural boundary zeros analytically with zero tuning constants.  
+   大量脑力职业在体力/精细动作维度上权重接近于零，直接用 KL 散度或对数比值（CLR/ILR）会触发零值发散或受人为平滑常数影响；base-2 Jensen–Shannon 距离在 $[0,1]$ 有界且天然免平滑常数。
+
+4. **Reframing the short-run wage null as an insight rather than a dead end（把短期薪资无显著增量转化为“二元调整机制”洞察）**  
+   Rather than p-hacking spline knots to chase a spurious wage correlation, evaluating ACS/OEWS wage regressions alongside longitudinal O\*NET rank turnover revealed the deeper truth: scalar exposure governs macro between-occupation pecuniary sorting, whereas capability balance sheets govern micro within-occupation task reorganization (`16.6×–19.5×` rank sensitivity).  
+   面对短期薪资回归中静态能力指标 $\Delta R^2 \le 0.0037$ 的现实，我们没有通过调参“刷显著性”，而是结合跨期秩变动检验，反而发现了更本质的**二元调整机制**：标量分数刻画宏观薪酬排序，而能力账本捕捉微观任务重组。
